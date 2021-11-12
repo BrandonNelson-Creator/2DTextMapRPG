@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace _2DTextMap
 {
     class Program
@@ -40,9 +41,18 @@ namespace _2DTextMap
 
         static void Main(string[] args)
         {
-            Console.WriteLine("TextMap");
+            Console.WriteLine("RPG 2D Console Map");
+            Console.WriteLine(" ");
+            Console.WriteLine("            (Normal) ");
+            Console.WriteLine(" ");
             DisplayMap();
+            Console.WriteLine(" ");
+            Ledgend();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("                                      (Scaled x3) ");
             DisplayMap(3);
+            Console.WriteLine(" ");
             Console.ReadKey(true);
         }
         static void DisplayMap()
@@ -107,6 +117,19 @@ namespace _2DTextMap
             }
             Console.Write(corners);
             Console.WriteLine();
+        }
+
+
+        static void Ledgend()
+        {
+            Console.WriteLine(" Legend: ");
+            Console.WriteLine(" ^ = Mountains ");
+            
+            Console.WriteLine(" ' = Grass ");
+            Console.WriteLine(" ~ = Water ");
+            Console.WriteLine(" * = Trees ");
+            Console.WriteLine(" = = Road ");
+
         }
     }
 }
